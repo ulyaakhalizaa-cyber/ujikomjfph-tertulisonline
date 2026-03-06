@@ -7,7 +7,6 @@ const validTokens = [
 "UJIAN21","UJIAN22","UJIAN23","UJIAN24","UJIAN25"
 ];
 
-// VARIABEL GLOBAL
 let currentQuestion = 0;
 let score = 0;
 let questions = [];
@@ -16,25 +15,57 @@ let questions = [];
 // BANK SOAL PER JENJANG
 const questionBank = {
 
+pemula: [
+
+{
+question:"Contoh soal pemula 1?",
+answers:[
+{text:"A",score:5},
+{text:"B",score:0},
+{text:"C",score:0},
+{text:"D",score:0}
+]
+}
+
+],
+
+terampil: [
+
+{
+question:"Contoh soal terampil 1?",
+answers:[
+{text:"A",score:0},
+{text:"B",score:5},
+{text:"C",score:0},
+{text:"D",score:0}
+]
+}
+
+],
+
+mahir: [
+
+{
+question:"Contoh soal mahir 1?",
+answers:[
+{text:"A",score:0},
+{text:"B",score:0},
+{text:"C",score:5},
+{text:"D",score:0}
+]
+}
+
+],
+
 pertama: [
 
 {
-question:"Contoh soal Ahli Pertama 1?",
+question:"Contoh soal ahli pertama 1?",
 answers:[
-{text:"Jawaban A", score:5},
-{text:"Jawaban B", score:0},
-{text:"Jawaban C", score:0},
-{text:"Jawaban D", score:0}
-]
-},
-
-{
-question:"Contoh soal Ahli Pertama 2?",
-answers:[
-{text:"Jawaban A", score:0},
-{text:"Jawaban B", score:5},
-{text:"Jawaban C", score:0},
-{text:"Jawaban D", score:0}
+{text:"A",score:5},
+{text:"B",score:0},
+{text:"C",score:0},
+{text:"D",score:0}
 ]
 }
 
@@ -43,52 +74,19 @@ answers:[
 muda: [
 
 {
-question:"Contoh soal Ahli Muda 1?",
+question:"Contoh soal ahli muda 1?",
 answers:[
-{text:"A", score:5},
-{text:"B", score:0},
-{text:"C", score:0},
-{text:"D", score:0}
-]
-},
-
-{
-question:"Contoh soal Ahli Muda 2?",
-answers:[
-{text:"A", score:0},
-{text:"B", score:5},
-{text:"C", score:0},
-{text:"D", score:0}
-]
-}
-
-],
-
-madya: [
-
-{
-question:"Contoh soal Ahli Madya 1?",
-answers:[
-{text:"A", score:5},
-{text:"B", score:0},
-{text:"C", score:0},
-{text:"D", score:0}
-]
-},
-
-{
-question:"Contoh soal Ahli Madya 2?",
-answers:[
-{text:"A", score:0},
-{text:"B", score:5},
-{text:"C", score:0},
-{text:"D", score:0}
+{text:"A",score:0},
+{text:"B",score:5},
+{text:"C",score:0},
+{text:"D",score:0}
 ]
 }
 
 ]
 
 };
+
 
 
 // LOGIN
@@ -101,6 +99,9 @@ if(validTokens.includes(token) && jenjang !== ""){
 
 questions = questionBank[jenjang];
 
+currentQuestion = 0;
+score = 0;
+
 document.getElementById("login").style.display="none";
 document.getElementById("exam").style.display="block";
 
@@ -109,11 +110,12 @@ startTimer();
 
 }else{
 
-document.getElementById("loginError").innerText = "Token salah atau jenjang belum dipilih";
+document.getElementById("loginError").innerText="Token atau jenjang belum dipilih";
 
 }
 
 }
+
 
 
 // TAMPILKAN SOAL
@@ -139,7 +141,8 @@ document.getElementById("questionBox").innerHTML = html;
 }
 
 
-// NEXT QUESTION
+
+// NEXT
 function nextQuestion(){
 
 let selected = document.querySelector('input[name="answer"]:checked');
@@ -165,7 +168,8 @@ finishExam();
 }
 
 
-// TIMER 30 MENIT
+
+// TIMER
 let time = 1800;
 
 function startTimer(){
@@ -192,6 +196,7 @@ finishExam();
 }
 
 
+
 // SELESAI
 function finishExam(){
 
@@ -199,6 +204,7 @@ document.getElementById("exam").innerHTML =
 "<h2>Ujian selesai</h2><p>Skor kamu: "+score+"</p>";
 
 }
+
 
 
 // BLOK KLIK KANAN
