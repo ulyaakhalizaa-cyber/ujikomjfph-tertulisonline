@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ujian Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="login">
+
+<h2>Login Ujian</h2>
+
+<input type="text" id="token" placeholder="Masukkan Token"><br><br>
+
+<select id="jenjang">
+<option value="">Pilih Jenjang Uji Kompetensi</option>
+<option value="Pemula">Pemula</option>
+<option value="Terampil">Terampil</option>
+<option value="Mahir">Mahir</option>
+<option value="Pertama">Ahli Pertama</option>
+<option value="Muda">Ahli Muda</option>
+</select>
+
+<br><br>
+
+<button onclick="startExam()">Mulai Ujian</button>
+
+<p id="loginError" style="color:red;"></p>
+
+</div>
+
+<div id="exam" style="display:none">
+
+<div id="timer"></div>
+
+<div id="questionBox"></div>
+
+<button onclick="nextQuestion()">Next</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
