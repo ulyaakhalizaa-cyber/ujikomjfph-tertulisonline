@@ -8,6 +8,7 @@ const validTokens = [
 
 let currentQuestion = 0;
 let score = 0;
+let questions = [];
 
 const questionBank = {
 
@@ -82,7 +83,7 @@ startTimer();
 
 }else{
 
-document.getElementById("loginError").innerText = "Token atau jenjang belum dipilih";
+document.getElementById("loginError").innerText="Token atau jenjang salah";
 
 }
 
