@@ -4,6 +4,13 @@ background:#f5f5f5;
 text-align:center;
 }
 
+body{
+user-select:none;
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+}
+
 #questionBox{
 background:white;
 padding:25px;
