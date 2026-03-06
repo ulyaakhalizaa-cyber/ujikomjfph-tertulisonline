@@ -9,29 +9,61 @@ const validTokens = [
 let currentQuestion = 0;
 let score = 0;
 
-const questions = [
+const questionBank = {
+
+pertama: [
 
 {
-question:"Ibukota Indonesia adalah?",
+question:"Contoh soal jenjang Ahli Pertama 1?",
 answers:[
-{text:"Jakarta", score:5},
-{text:"Bandung", score:0},
-{text:"Surabaya", score:0},
-{text:"Medan", score:0}
+{text:"A", score:5},
+{text:"B", score:0},
+{text:"C", score:0},
+{text:"D", score:0}
 ]
 },
 
 {
-question:"2 + 2 = ?",
+question:"Contoh soal jenjang Ahli Pertama 2?",
 answers:[
-{text:"3", score:0},
-{text:"4", score:5},
-{text:"5", score:0},
-{text:"6", score:0}
+{text:"A", score:0},
+{text:"B", score:5},
+{text:"C", score:0},
+{text:"D", score:0}
 ]
 }
 
-];
+],
+
+muda: [
+
+{
+question:"Contoh soal jenjang Ahli Muda 1?",
+answers:[
+{text:"A", score:5},
+{text:"B", score:0},
+{text:"C", score:0},
+{text:"D", score:0}
+]
+}
+
+],
+
+madya: [
+
+{
+question:"Contoh soal jenjang Ahli Madya 1?",
+answers:[
+{text:"A", score:5},
+{text:"B", score:0},
+{text:"C", score:0},
+{text:"D", score:0}
+]
+}
+
+]
+
+};
 
 function startExam(){
 
