@@ -18,12 +18,13 @@ const questionBank = {
 pemula: [
 
 {
-question:"Contoh soal pemula 1?",
+question:"Nasi dari?",
 answers:[
 {text:"A",score:5},
-{text:"B",score:0},
-{text:"C",score:0},
-{text:"D",score:0}
+{text:"B",score:4},
+{text:"C",score:3},
+{text:"D",score:2},
+{text:"E",score:1}
 ]
 }
 
@@ -32,12 +33,13 @@ answers:[
 terampil: [
 
 {
-question:"Contoh soal terampil 1?",
+question:"Susu dari?",
 answers:[
-{text:"A",score:0},
-{text:"B",score:5},
-{text:"C",score:0},
-{text:"D",score:0}
+{text:"A",score:5},
+{text:"B",score:4},
+{text:"C",score:3},
+{text:"D",score:2},
+{text:"E",score:1}
 ]
 }
 
@@ -46,12 +48,13 @@ answers:[
 mahir: [
 
 {
-question:"Contoh soal mahir 1?",
+question:"Sapi makan?",
 answers:[
-{text:"A",score:0},
-{text:"B",score:0},
-{text:"C",score:5},
-{text:"D",score:0}
+{text:"A",score:5},
+{text:"B",score:4},
+{text:"C",score:3},
+{text:"D",score:2},
+{text:"E",score:1}
 ]
 }
 
@@ -60,12 +63,13 @@ answers:[
 pertama: [
 
 {
-question:"Contoh soal ahli pertama 1?",
+question:"Rumput warnanya?",
 answers:[
 {text:"A",score:5},
-{text:"B",score:0},
-{text:"C",score:0},
-{text:"D",score:0}
+{text:"B",score:4},
+{text:"C",score:3},
+{text:"D",score:2},
+{text:"E",score:1}
 ]
 }
 
@@ -74,12 +78,13 @@ answers:[
 muda: [
 
 {
-question:"Contoh soal ahli muda 1?",
+question:"Sapi minum?",
 answers:[
-{text:"A",score:0},
-{text:"B",score:5},
-{text:"C",score:0},
-{text:"D",score:0}
+{text:"A",score:5},
+{text:"B",score:4},
+{text:"C",score:3},
+{text:"D",score:2},
+{text:"E",score:1}
 ]
 }
 
