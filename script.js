@@ -1,3 +1,4 @@
+// TOKEN PESERTA
 const validTokens = [
 "UJIAN01","UJIAN02","UJIAN03","UJIAN04","UJIAN05",
 "UJIAN06","UJIAN07","UJIAN08","UJIAN09","UJIAN10",
@@ -6,16 +7,43 @@ const validTokens = [
 "UJIAN21","UJIAN22","UJIAN23","UJIAN24","UJIAN25"
 ];
 
+// VARIABEL GLOBAL
 let currentQuestion = 0;
 let score = 0;
 let questions = [];
 
+
+// BANK SOAL PER JENJANG
 const questionBank = {
 
 pertama: [
 
 {
-question:"Contoh soal jenjang Ahli Pertama 1?",
+question:"Contoh soal Ahli Pertama 1?",
+answers:[
+{text:"Jawaban A", score:5},
+{text:"Jawaban B", score:0},
+{text:"Jawaban C", score:0},
+{text:"Jawaban D", score:0}
+]
+},
+
+{
+question:"Contoh soal Ahli Pertama 2?",
+answers:[
+{text:"Jawaban A", score:0},
+{text:"Jawaban B", score:5},
+{text:"Jawaban C", score:0},
+{text:"Jawaban D", score:0}
+]
+}
+
+],
+
+muda: [
+
+{
+question:"Contoh soal Ahli Muda 1?",
 answers:[
 {text:"A", score:5},
 {text:"B", score:0},
@@ -25,7 +53,7 @@ answers:[
 },
 
 {
-question:"Contoh soal jenjang Ahli Pertama 2?",
+question:"Contoh soal Ahli Muda 2?",
 answers:[
 {text:"A", score:0},
 {text:"B", score:5},
@@ -36,27 +64,23 @@ answers:[
 
 ],
 
-muda: [
+madya: [
 
 {
-question:"Contoh soal jenjang Ahli Muda 1?",
+question:"Contoh soal Ahli Madya 1?",
 answers:[
 {text:"A", score:5},
 {text:"B", score:0},
 {text:"C", score:0},
 {text:"D", score:0}
 ]
-}
-
-],
-
-madya: [
+},
 
 {
-question:"Contoh soal jenjang Ahli Madya 1?",
+question:"Contoh soal Ahli Madya 2?",
 answers:[
-{text:"A", score:5},
-{text:"B", score:0},
+{text:"A", score:0},
+{text:"B", score:5},
 {text:"C", score:0},
 {text:"D", score:0}
 ]
@@ -66,6 +90,8 @@ answers:[
 
 };
 
+
+// LOGIN
 function startExam(){
 
 let token = document.getElementById("token").value;
@@ -83,12 +109,14 @@ startTimer();
 
 }else{
 
-document.getElementById("loginError").innerText="Token atau jenjang salah";
+document.getElementById("loginError").innerText = "Token salah atau jenjang belum dipilih";
 
 }
 
 }
 
+
+// TAMPILKAN SOAL
 function showQuestion(){
 
 let q = questions[currentQuestion];
@@ -110,6 +138,8 @@ document.getElementById("questionBox").innerHTML = html;
 
 }
 
+
+// NEXT QUESTION
 function nextQuestion(){
 
 let selected = document.querySelector('input[name="answer"]:checked');
@@ -134,6 +164,8 @@ finishExam();
 
 }
 
+
+// TIMER 30 MENIT
 let time = 1800;
 
 function startTimer(){
@@ -159,6 +191,8 @@ finishExam();
 
 }
 
+
+// SELESAI
 function finishExam(){
 
 document.getElementById("exam").innerHTML =
@@ -166,4 +200,6 @@ document.getElementById("exam").innerHTML =
 
 }
 
+
+// BLOK KLIK KANAN
 document.addEventListener('contextmenu', event => event.preventDefault());
